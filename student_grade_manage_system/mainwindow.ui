@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>学生成绩管理系统</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTabWidget" name="select_tool">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>查看年级</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <widget class="QLabel" name="title_tab1">
+              <property name="text">
+               <string>信息学院</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="grade_info">
+           <attribute name="title">
+            <string>查看专业</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="1" column="0">
+             <widget class="QComboBox" name="select_grade_tab1">
+              <property name="placeholderText">
+               <string>请选择年级</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="major_info">
+           <attribute name="title">
+            <string>查看班级</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="0">
+             <widget class="QComboBox" name="select_grade_tab2">
+              <property name="placeholderText">
+               <string>请选择年级</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="select_major_tab2">
+              <property name="placeholderText">
+               <string>请选择专业</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="class_info">
+           <attribute name="title">
+            <string>查看学生概况</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <widget class="QComboBox" name="select_grade_tab3">
+              <property name="placeholderText">
+               <string>请选择年级</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="select_major_tab3">
+              <property name="placeholderText">
+               <string>请选择专业</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QComboBox" name="select_class_tab3">
+              <property name="placeholderText">
+               <string>请选择班级</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="stu_info">
+           <attribute name="title">
+            <string>查看学生成绩</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="0">
+             <widget class="QComboBox" name="select_grade_tab4">
+              <property name="placeholderText">
+               <string>请选择年级</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="select_major_tab4">
+              <property name="placeholderText">
+               <string>请选择专业</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QComboBox" name="select_class_tab4">
+              <property name="placeholderText">
+               <string>请选择班级</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QComboBox" name="select_stu_tab4">
+              <property name="placeholderText">
+               <string>请选择学生</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="info_list"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="insert">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>添加年级</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="del">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>删除所选项</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="del_all">
+          <property name="text">
+           <string>清空</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="find">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>查找</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="show_detail">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>查看</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="edit">
+          <property name="text">
+           <string>编辑</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>insert</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showInsertDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>494</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>find</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showSearchDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_major_tab2</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>refreshClassList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_grade_tab4</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>iniMajorComboBoxTab4(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_class_tab3</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>refreshStuList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>580</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_tool</sender>
+   <signal>tabBarClicked(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeInfoListType(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_grade_tab2</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>iniMajorComboBoxTab2(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>187</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_class_tab4</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>iniStuComboBoxTab4(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>440</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_stu_tab4</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>refreshSubList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>608</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_major_tab4</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>iniClassComboBoxTab4(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_grade_tab3</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>iniMajorComboBoxTab3(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>131</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_grade_tab1</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>refreshMajorList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_major_tab3</sender>
+   <signal>activated(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>iniClassComboBoxTab3(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>del</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>delData()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>show_detail</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showDetail()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>144</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showEditDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>163</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>del_all</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>delAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>748</x>
+     <y>103</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showInsertDialog()</slot>
+  <slot>changeInfoListType(int)</slot>
+  <slot>showSearchDialog()</slot>
+  <slot>iniMajorComboBoxTab2(int)</slot>
+  <slot>iniMajorComboBoxTab3(int)</slot>
+  <slot>iniClassComboBoxTab3(int)</slot>
+  <slot>iniMajorComboBoxTab4(int)</slot>
+  <slot>iniClassComboBoxTab4(int)</slot>
+  <slot>iniStuComboBoxTab4(int)</slot>
+  <slot>refreshMajorList()</slot>
+  <slot>refreshClassList()</slot>
+  <slot>refreshStuList()</slot>
+  <slot>refreshSubList()</slot>
+  <slot>delData()</slot>
+  <slot>showDetail()</slot>
+  <slot>showEditDialog()</slot>
+  <slot>delAll()</slot>
+ </slots>
+</ui>
